@@ -2,7 +2,7 @@
 cask "symbolista" do
   desc "A CLI tool to count occurrances of characters in a directory, with a TUI mode"
   homepage "https://github.com/ogdakke/symbolista"
-  version "0.1.0"
+  version "0.1.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,23 @@ cask "symbolista" do
 
   on_macos do
     on_intel do
-      url "https://github.com/ogdakke/symbolista/releases/download/v0.1.0/symbolista_Darwin_x86_64.tar.gz"
-      sha256 "8da5dd34e61aa8b9b2b73553d286e241eb4a5a7fcca449da6286148fa1e27e48"
+      url "https://github.com/ogdakke/symbolista/releases/download/v0.1.1/symbolista_Darwin_x86_64.tar.gz"
+      sha256 "b02c3c64395b1a93f74c66cc9cb3ca1f2c95729bebbe937ea5f5a8476de30a21"
     end
     on_arm do
-      url "https://github.com/ogdakke/symbolista/releases/download/v0.1.0/symbolista_Darwin_arm64.tar.gz"
-      sha256 "237d0d0816ddcd8c0130f8ce5aae73cd2abf57b52ef229de713127e9dff10e31"
+      url "https://github.com/ogdakke/symbolista/releases/download/v0.1.1/symbolista_Darwin_arm64.tar.gz"
+      sha256 "c03bc15ac69486b6b4cbe6b083dff04e4205408e8993ed29d972b7112328e347"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/ogdakke/symbolista/releases/download/v0.1.0/symbolista_Linux_x86_64.tar.gz"
-      sha256 "33bbca1ed8d45106e0638869d4852f95dad43b9d954489a35e1225299db10203"
+      url "https://github.com/ogdakke/symbolista/releases/download/v0.1.1/symbolista_Linux_x86_64.tar.gz"
+      sha256 "5c69e3881f00b7967b864790db8b6935e58feaea7e06093509808d85a82712cb"
     end
     on_arm do
-      url "https://github.com/ogdakke/symbolista/releases/download/v0.1.0/symbolista_Linux_arm64.tar.gz"
-      sha256 "e19952a8fd73f9cb35959e37cb72bfcf048a89426decf65bfa51a4497998c698"
+      url "https://github.com/ogdakke/symbolista/releases/download/v0.1.1/symbolista_Linux_arm64.tar.gz"
+      sha256 "63e6a23a93fba9bcac66fdf3bf8c8a1464b121b43e74d355143e5ba369729828"
     end
   end
 
