@@ -2,7 +2,7 @@
 cask "symbolista" do
   desc "A CLI tool to count occurrances of characters in a directory, with a TUI mode"
   homepage "https://github.com/ogdakke/symbolista"
-  version "0.0.9"
+  version "0.0.10"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,29 @@ cask "symbolista" do
 
   on_macos do
     on_intel do
-      url "https://github.com/ogdakke/symbolista/releases/download/v0.0.9/symbolista_Darwin_x86_64.tar.gz"
-      sha256 "42b15b7bf7401f53734c92b0fe04851b48ef2e1fc16a7c6e1095c0a1e67620fe"
+      url "https://github.com/ogdakke/symbolista/releases/download/v0.0.10/symbolista_Darwin_x86_64.tar.gz"
+      sha256 "536b2702e1ae9774021b3ddb78d2b0be36e5a7eac560960dc0127d0e5d0b93b9"
     end
     on_arm do
-      url "https://github.com/ogdakke/symbolista/releases/download/v0.0.9/symbolista_Darwin_arm64.tar.gz"
-      sha256 "1939618280bf3d0985ae6e4b5d0f920ad2759bde36974c89c3a3ddb27b674535"
+      url "https://github.com/ogdakke/symbolista/releases/download/v0.0.10/symbolista_Darwin_arm64.tar.gz"
+      sha256 "fa642dcb52282fd47541891195225fbf28f3e5ebe3931c1fcedc384c3fc9ef9d"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/ogdakke/symbolista/releases/download/v0.0.9/symbolista_Linux_x86_64.tar.gz"
-      sha256 "68c60c86bb146bf5382b6b261726d5b054bae1ad9d2926620c4176a9772a3bf2"
+      url "https://github.com/ogdakke/symbolista/releases/download/v0.0.10/symbolista_Linux_x86_64.tar.gz"
+      sha256 "bf5103730bb37077588aa3d22e673e66838caaed0f9a29f6c678d41b356469b2"
     end
     on_arm do
-      url "https://github.com/ogdakke/symbolista/releases/download/v0.0.9/symbolista_Linux_arm64.tar.gz"
-      sha256 "5fed539b77037fb2aa96e50efd88890bf05a512d136d114d292492c5edbf8427"
+      url "https://github.com/ogdakke/symbolista/releases/download/v0.0.10/symbolista_Linux_arm64.tar.gz"
+      sha256 "56e7d0db2006c398d7addd3d99fda91afe1db3a2dae3ff904af909de0ec1be61"
+    end
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/symbolista"]
     end
   end
 
